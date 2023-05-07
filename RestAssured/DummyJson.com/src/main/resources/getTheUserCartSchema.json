@@ -1,0 +1,50 @@
+{
+  "type" : "object",
+  "properties" :
+  {
+    "carts" :
+    {
+      "type" : "array",
+      "items" :
+      {
+        "type" : "object",
+        "properties" :
+        {
+          "id" : {"type" : "number"},
+          "products" :
+          {
+            "type" : "array",
+            "items" :
+            {
+              "type" : "object",
+              "properties" :
+              {
+                "id" : {"type" : "number"},
+                "title" : {"type" : "string"},
+                "price" : {"type" : "number"},
+                "quantity" :{"type" : "number"},
+                "total" : {"type" : "number"},
+                "discountPercentage" : {"type" : "number"},
+                "discountedPrice" : {"type" : "number"}
+              },
+              "required" : ["id", "title", "price", "quantity", "total", "discountPercentage", "discountedPrice"],
+              "additionalProperties" : false
+            }
+          },
+          "total" : {"type" : "number"},
+          "discountedTotal" : {"type" : "number"},
+          "userId" : {"type" : "number"},
+          "totalProducts" : {"type" : "number"},
+          "totalQuantity" : {"type" : "number"}
+        },
+        "required" : ["id", "products", "total", "discountedTotal", "userId", "totalProducts", "totalQuantity"],
+        "additionalProperties": false
+      }
+    },
+    "total" : {"type" : "number"},
+    "skip" : {"type" : "number"},
+    "limit" : {"type" : "number"}
+  },
+  "required" : ["carts","total","skip","limit"],
+  "additionalProperties" : false
+}

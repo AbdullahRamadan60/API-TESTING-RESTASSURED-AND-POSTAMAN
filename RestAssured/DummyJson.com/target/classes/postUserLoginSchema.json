@@ -1,0 +1,16 @@
+{
+  "type" : "object",
+  "properties" :
+  {
+    "id" : {"type" : "number"},
+    "username" : {"type" : "string"},
+    "email" : {"type" : "string"},
+    "firstName" : {"type" : "string"},
+    "lastName" : {"type" : "string"},
+    "gender" : {"enum" : ["male","female"]},
+    "image" : {"type" : "string"},
+    "token" : {"type" : "string"}
+  },
+  "required" : ["id","username","email","firstName","lastName","gender","image","token"],
+  "additionalProperties" : false
+}
